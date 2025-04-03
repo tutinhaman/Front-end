@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Classificação - Grupo F</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Hover suave nas linhas da tabela */
+        .table-hover tbody tr:hover {
+            transform: scale(1.01);
+            transition: transform 0.2s ease;
+        }
+
+        /* Badges para indicar posição ou classificação */
+        .status-badge {
+            width: 18px;
+            height: 18px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            margin-right: 8px;
+        }
+        .qualified-badge {
+            background-color: #28a745; /* Verde do Bootstrap 4 */
+            color: white;
+        }
+        .eliminated-badge {
+            background-color: #dc3545; /* Vermelho do Bootstrap 4 */
+            color: white;
+        }
+
+        /* Card de partidas */
+        .match-card {
+            transition: box-shadow 0.3s ease;
+        }
+        .match-card:hover {
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        /* Pontos coloridos de resultados recentes */
+        .result-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 2px;
+        }
+
+        /* Logos das seleções */
+        .team-logo {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+            object-fit: contain;
+        }
+
+        /* Ajustes de fontes em telas menores */
+        @media (max-width: 768px) {
+            .match-result {
+                font-size: 1.2rem;
+            }
+            .team-code {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Cores e estilos específicos para fidelidade ao layout */
+        .btn-outline-primary {
+            border-color: #007bff !important;
+            color: #007bff !important;
+        }
+        .btn-outline-primary:hover {
+            background-color: #007bff !important;
+            color: white !important;
+        }
+        .match-result {
+            background-color: #e9ecef !important; /* Cinza claro para o resultado */
+            border-radius: 20px; /* Para deixá-lo bem arredondado */
+            padding: 0.25rem 0.75rem !important; /* Ajuste do padding */
+        }
+        .card {
+            border-radius: 8px; /* Cantos arredondados nos cards */
+            box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05); /* Sutil sombra */
+        }
+        .table {
+            border-collapse: separate; /* Espaçamento entre as células da tabela */
+            border-spacing: 0 8px; /* Aumenta o espaçamento horizontal */
+        }
+        .table td, .table th {
+            border: none; /* Remove as bordas padrão da tabela */
+            padding: 0.75rem 0.5rem; /* Ajusta o padding das células */
+        }
+        .table thead th {
+            border-bottom: 2px solid #dee2e6; /* Adiciona uma borda inferior ao cabeçalho */
+        }
+        .table-hover tbody tr:hover {
+            background-color: rgba(0, 0, 0, 0.075) !important; /* Mais suave */
+        }
+        .btn-veja-como-foi {
+            color: #007bff !important;
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            padding: 0;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .btn-veja-como-foi:hover {
+            color: #0056b3 !important;
+            text-decoration: underline;
+        }
+        .card-header {
+            background-color: #e9ecef !important;
+            color: #212529;
+        }
+
+    </style>
+</head>
+<body class="bg-light">
+    <div class="container py-4">
+        <h2 class="fw-bold text-primary mb-4">GRUPO F</h2>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow">
+                    <div class="card-body p-0">
+                        <div class="table-responsive">
+                            <table class="table table-hover align-middle mb-0">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col" class="ps-4">CLASSIFICAÇÃO</th>
+                                        <th scope="col">P</th>
+                                        <th scope="col">J</th>
+                                        <th scope="col">V</th>
+                                        <th scope="col">E</th>
+                                        <th scope="col">D</th>
+                                        <th scope="col">GP</th>
+                                        <th scope="col">GC</th>
+                                        <th scope="col">SG</th>
+                                        <th scope="col">%</th>
+                                        <th scope="col">ÚLT. JOGOS</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <span class="status-badge qualified-badge">1</span>
+                                            França
+                                        </td>
+                                        <td><strong>7</strong></td>
+                                        <td>3</td>
+                                        <td>2</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>8</td>
+                                        <td>4</td>
+                                        <td>+4</td>
+                                        <td>77%</td>
+                                        <td>
+                                            <span class="result-dot bg-success" title="Vitória"></span>
+                                            <span class="result-dot bg-success" title="Vitória"></span>
+                                            <span class="result-dot bg-warning" title="Empate"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <span class="status-badge qualified-badge">2</span>
+                                            Jamaica
+                                        </td>
+                                        <td><strong>5</strong></td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>+1</td>
+                                        <td>55%</td>
+                                        <td>
+                                            <span class="result-dot bg-success" title="Vitória"></span>
+                                            <span class="result-dot bg-warning" title="Empate"></span>
+                                            <span class="result-dot bg-warning" title="Empate"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <span class="status-badge eliminated-badge">3</span>
+                                            Brasil
+                                        </td>
+                                        <td><strong>4</strong></td>
+                                        <td>3</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>1</td>
+                                        <td>4</td>
+                                        <td>4</td>
+                                        <td>0</td>
+                                        <td>44%</td>
+                                        <td>
+                                            <span class="result-dot bg-success" title="Vitória"></span>
+                                            <span class="result-dot bg-danger" title="Derrota"></span>
+                                            <span class="result-dot bg-warning" title="Empate"></span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="ps-4">
+                                            <span class="status-badge eliminated-badge">4</span>
+                                            Panamá
+                                        </td>
+                                        <td><strong>0</strong></td>
+                                        <td>3</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>3</td>
+                                        <td>3</td>
+                                        <td>11</td>
+                                        <td>-8</td>
+                                        <td>0%</td>
+                                        <td>
+                                            <span class="result-dot bg-danger" title="Derrota"></span>
+                                            <span class="result-dot bg-danger" title="Derrota"></span>
+                                            <span class="result-dot bg-danger" title="Derrota"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="card match-card border-0 shadow">
+                    <div class="card-header">
+                        <h5 class="mb-0">3ª RODADA</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <small class="text-muted">Qua 02/08/2023 | Melbourne Rectangular Stadium</small>
+                            <small class="text-muted">07:00</small>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <img src="https://flagcdn.com/24x18/jm.png" class="team-logo" alt="Bandeira da Jamaica">
+                                <span class="team-code fw-bold">JAM</span>
+                            </div>
+                            <div class="text-center mx-3">
+                                <div class="match-result">
+                                    <span class="text-primary fw-bold">0 - 0</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img src="https://flagcdn.com/24x18/br.png" class="team-logo" alt="Bandeira do Brasil">
+                                <span class="team-code fw-bold">BRA</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-link btn-veja-como-foi w-100 mb-4">
+                            Veja como foi
+                        </button>
+
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <small class="text-muted">Qua 02/08/2023 | Sydney Football Stadium</small>
+                            <small class="text-muted">07:00</small>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+                            <div class="d-flex align-items-center">
+                                <img src="https://flagcdn.com/24x18/pa.png" class="team-logo" alt="Bandeira do Panamá">
+                                <span class="team-code fw-bold">PAN</span>
+                            </div>
+                            <div class="text-center mx-3">
+                                <div class="match-result">
+                                    <span class="text-primary fw-bold">3 - 6</span>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img src="https://flagcdn.com/24x18/fr.png" class="team-logo" alt="Bandeira da França">
+                                <span class="team-code fw-bold">FRA</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-link btn-veja-como-foi w-100">
+                            Veja como foi
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/10.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
