@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <title>Bootstrap 4 Example</title>
     <meta charset="utf-8">
@@ -11,160 +11,160 @@
 </head>
 <body>
 
-    <h1>My first bootstrap</h1>
+    <h1>Meu primeiro bootstrap</h1>
    
 <div class="container">
-    <h2>Basic Table</h2>
-    <p>The table class basic styling (light padding and only horizontal dividers) to a table:</p>
+    <h2>Tabela Básica</h2>
+    <p>A classe <code>table</code> adiciona um estilo básico (leve espaçamento e apenas divisores horizontais) a uma tabela:</p>
     <table class="table">
         <thead>
             <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
                 <th>Email</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
+                <td>João</td>
+                <td>Silva</td>
+                <td>joao@example.com</td>
             </tr>
             <tr>
-                <td>Mary</td>
-                <td>Moe</td>
-                <td>mary@example.com</td>
+                <td>Maria</td>
+                <td>Santos</td>
+                <td>maria@example.com</td>
             </tr>
             <tr>
-                <td>July</td>
-                <td>Dooley</td>
-                <td>july@example.com</td>
+                <td>Juliana</td>
+                <td>Oliveira</td>
+                <td>juliana@example.com</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>Striped Table</h2>
-    <p>Add <code>.table-striped</code> to create a striped table:</p>
+    <h2>Tabela Listrada</h2>
+    <p>Adicione <code>.table-striped</code> para criar uma tabela listrada:</p>
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
                 <th>Email</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
+                <td>João</td>
+                <td>Silva</td>
+                <td>joao@example.com</td>
             </tr>
             <tr>
-                <td>Mary</td>
-                <td>Moe</td>
-                <td>mary@example.com</td>
+                <td>Maria</td>
+                <td>Santos</td>
+                <td>maria@example.com</td>
             </tr>
             <tr>
-                <td>July</td>
-                <td>Dooley</td>
-                <td>july@example.com</td>
+                <td>Juliana</td>
+                <td>Oliveira</td>
+                <td>juliana@example.com</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>Bordered Table</h2>
-    <p>Add <code>.table-bordered</code> to create a table with borders:</p>
+    <h2>Tabela com Bordas</h2>
+    <p>Adicione <code>.table-bordered</code> para criar uma tabela com bordas:</p>
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
                 <th>Email</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
+                <td>João</td>
+                <td>Silva</td>
+                <td>joao@example.com</td>
             </tr>
             <tr>
-                <td>Mary</td>
-                <td>Moe</td>
-                <td>mary@example.com</td>
+                <td>Maria</td>
+                <td>Santos</td>
+                <td>maria@example.com</td>
             </tr>
             <tr>
-                <td>July</td>
-                <td>Dooley</td>
-                <td>july@example.com</td>
+                <td>Juliana</td>
+                <td>Oliveira</td>
+                <td>juliana@example.com</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>Hoverable Table</h2>
-    <p>Add <code>.table-hover</code> to enable a hover state on table rows:</p>
+    <h2>Tabela com Hover</h2>
+    <p>Adicione <code>.table-hover</code> para habilitar o efeito de hover nas linhas da tabela:</p>
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
                 <th>Email</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
+                <td>João</td>
+                <td>Silva</td>
+                <td>joao@example.com</td>
             </tr>
             <tr>
-                <td>Mary</td>
-                <td>Moe</td>
-                <td>mary@example.com</td>
+                <td>Maria</td>
+                <td>Santos</td>
+                <td>maria@example.com</td>
             </tr>
             <tr>
-                <td>July</td>
-                <td>Dooley</td>
-                <td>july@example.com</td>
+                <td>Juliana</td>
+                <td>Oliveira</td>
+                <td>juliana@example.com</td>
             </tr>
         </tbody>
     </table>
 
-    <h2>Contextual Classes</h2>
-    <p>Use contextual classes to color table rows or cells:</p>
+    <h2>Tabela com Classes Contextuais</h2>
+    <p>Use classes contextuais para colorir linhas ou células da tabela:</p>
     <table class="table">
         <thead>
             <tr>
-                <th>Firstname</th>
-                <th>Lastname</th>
+                <th>Nome</th>
+                <th>Sobrenome</th>
                 <th>Email</th>
             </tr>
         </thead>
         <tbody>
             <tr class="table-primary">
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
+                <td>João</td>
+                <td>Silva</td>
+                <td>joao@example.com</td>
             </tr>
             <tr class="table-success">
-                <td>Mary</td>
-                <td>Moe</td>
-                <td>mary@example.com</td>
+                <td>Maria</td>
+                <td>Santos</td>
+                <td>maria@example.com</td>
             </tr>
             <tr class="table-danger">
-                <td>July</td>
-                <td>Dooley</td>
-                <td>july@example.com</td>
+                <td>Juliana</td>
+                <td>Oliveira</td>
+                <td>juliana@example.com</td>
             </tr>
             <tr class="table-warning">
-                <td>Anna</td>
-                <td>Smith</td>
-                <td>anna@example.com</td>
+                <td>Ana</td>
+                <td>Souza</td>
+                <td>ana@example.com</td>
             </tr>
             <tr class="table-info">
-                <td>Peter</td>
-                <td>Jones</td>
-                <td>peter@example.com</td>
+                <td>Pedro</td>
+                <td>Almeida</td>
+                <td>pedro@example.com</td>
             </tr>
         </tbody>
     </table>
