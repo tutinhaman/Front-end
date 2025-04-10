@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <title>Tabela Copa do Mundo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #b00020;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .group-card {
+            background-color: #fff;
+            color: #b00020;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .group-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .group-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .group-card ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            justify-content: center; 
+        }
+
+        .group-card ul li img {
+            width: 24px;
+            height: 16px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container pt-4">
+        <div class="row">
+            <!-- Group A -->
+            <div class="col-md-3">
+                <div class="group-card">
+                    <h3>Group A</h3>
+                    <ul>
+                        <li><img src="https://flagcdn.com/w40/qa.png" alt="Qatar"> Qatar</li>
+                        <li><img src="https://flagcdn.com/w40/ec.png" alt="Ecuador"> Ecuador</li>
+                        <li><img src="https://flagcdn.com/w40/sn.png" alt="Senegal"> Senegal</li>
+                        <li><img src="https://flagcdn.com/w40/nl.png" alt="Netherlands"> Netherlands</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Group B -->
+            <div class="col-md-3">
+                <div class="group-card">
+                    <h3>Group B</h3>
+                    <ul>
+                        <li><img src="https://flagcdn.com/w40/gb-eng.png" alt="England"> England</li>
+                        <li><img src="https://flagcdn.com/w40/ir.png" alt="Iran"> IR Iran</li>
+                        <li><img src="https://flagcdn.com/w40/us.png" alt="USA"> USA</li>
+                        <li><img src="https://flagcdn.com/w40/eu.png" alt="Euro Play-off"> Euro Play-off</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Group C -->
+            <div class="col-md-3">
+                <div class="group-card">
+                    <h3>Group C</h3>
+                    <ul>
+                        <li><img src="https://flagcdn.com/w40/ar.png" alt="Argentina"> Argentina</li>
+                        <li><img src="https://flagcdn.com/w40/sa.png" alt="Saudi Arabia"> Saudi Arabia</li>
+                        <li><img src="https://flagcdn.com/w40/mx.png" alt="Mexico"> Mexico</li>
+                        <li><img src="https://flagcdn.com/w40/pl.png" alt="Poland"> Poland</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Group D -->
+            <div class="col-md-3">
+                <div class="group-card">
+                    <h3>Group D</h3>
+                    <ul>
+                        <li><img src="https://flagcdn.com/w40/fr.png" alt="France"> France</li>
+                        <li><img src="https://flagcdn.com/w40/fifa.png" alt="IC Play-off 1"> IC Play-off 1</li>
+                        <li><img src="https://flagcdn.com/w40/dk.png" alt="Denmark"> Denmark</li>
+                        <li><img src="https://flagcdn.com/w40/tn.png" alt="Tunisia"> Tunisia</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Group E -->
+            <div class="col-md-3">
+                <div class="group-card">
+                    <h3>Group E</h3>
+                    <ul>
+                        <li><img src="https://flagcdn.com/w40/es.png" alt="Spain"> Spain</li>
+                        <li><img src="https://flagcdn.com/w40/fifa.png" alt="IC Play-off 2"> IC Play-off 2</li>
+                        <li><img src="https://flagcdn.com/w40/de.png" alt="Germany"> Germany</li>
+                        <li><img src="https://flagcdn.com/w40/jp.png" alt="Japan"> Japan</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Group F -->
+            <div class="col-md-3">
+                <div class="group-card">
+                    <h3>Group F</h3>
+                    <ul>
+                        <li><img src="https://flagcdn.com/w40/be.png" alt="Belgium"> Belgium</li>
+                        <li><img src="https://flagcdn.com/w40/ca.png" alt="Canada"> Canada</li>
+                        <li><img src="https://flagcdn.com/w40/ma.png" alt="Morocco"> Morocco</li>
+                        <li><img src="https://flagcdn.com/w40/hr.png" alt="Croatia"> Croatia</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Group G -->
+            <div class="col-md-3">
+                <div class="group-card">
+                    <h3>Group G</h3>
+                    <ul>
+                        <li><img src="https://flagcdn.com/w40/br.png" alt="Brazil"> Brazil</li>
+                        <li><img src="https://flagcdn.com/w40/rs.png" alt="Serbia"> Serbia</li>
+                        <li><img src="https://flagcdn.com/w40/ch.png" alt="Switzerland"> Switzerland</li>
+                        <li><img src="https://flagcdn.com/w40/cm.png" alt="Cameroon"> Cameroon</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Group H -->
+            <div class="col-md-3">
+                <div class="group-card">
+                    <h3>Group H</h3>
+                    <ul>
+                        <li><img src="https://flagcdn.com/w40/pt.png" alt="Portugal"> Portugal</li>
+                        <li><img src="https://flagcdn.com/w40/gh.png" alt="Ghana"> Ghana</li>
+                        <li><img src="https://flagcdn.com/w40/uy.png" alt="Uruguay"> Uruguay</li>
+                        <li><img src="https://flagcdn.com/w40/kr.png" alt="Korea Republic"> Korea Republic</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script do Bootstrap (Opcional para funcionalidades JS) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
