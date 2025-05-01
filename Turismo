@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descubra o Brasil</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .jumbotron {
+            background-image: url('https://cdn.panrotas.com.br/portal-panrotas-statics/media-files-cache/312723/dc84d2a6998ced1b8370b2cd31fd347feuropa/0,0,1640,924/full,0.32/0/default.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+        .jumbotron .container {
+            background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semitransparente para melhorar a legibilidade */
+            padding: 40px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <h1 class="display-4">Descubra o Brasil</h1>
+            <p class="lead">Explore as maravilhas naturais e culturais do nosso país.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Saiba mais</a>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <div class="card-deck">
+            <!-- Praias Paradisíacas -->
+            <div class="card">
+                <img src="https://gohappyturismo.com.br/wordpress/wp-content/files/gohappyturismo.com.br/2024/04/5-praias-mais-bonitas-br.png" class="card-img-top" alt="Praias">
+                <div class="card-body">
+                    <h5 class="card-title">Praias Paradisíacas</h5>
+                    <p class="card-text">Relaxe nas areias brancas e águas cristalinas do litoral brasileiro.</p>
+                    <a href="#" class="btn btn-outline-success">Ver mais</a>
+                </div>
+            </div>
+            
+            
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJw5QcC8OtgyG4viLY-B9l0IPv6mWnOl_s6Q&s" class="card-img-top" alt="Montanhas">
+                <div class="card-body">
+                    <h5 class="card-title">Aventura nas Montanhas</h5>
+                    <p class="card-text">Trilhas emocionantes e paisagens de tirar o fôlego esperam por você.</p>
+                    <a href="#" class="btn btn-outline-warning">Explore</a>
+                </div>
+            </div>
+            
+            
+            <div class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYFjXOSbiEpyvKbQ03Cxg2aqbYYrbF5Aj15kVl6ke6VEvZQ6rew2zVRRUh4R5JhEUYLfc&usqp=CAU" class="card-img-top" alt="Cultura">
+                <div class="card-body">
+                    <h5 class="card-title">Riqueza Cultural</h5>
+                    <p class="card-text">Descubra a história, a arte e a gastronomia vibrante do Brasil.</p>
+                    <a href="#" class="btn btn-outline-danger">Conheça</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4sCKa41ixlFGmgdhtyoEGjOTrECUxg-HZPw&s" class="img-fluid rounded" alt="Paisagem Brasileira">
+        </div>
+
+        <div class="row mt-5">
+            <!-- Cartão do Rio de Janeiro com imagem maior -->
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-12">
+                            <img src="https://wamcomercializacao.com/wp-content/uploads/2022/07/Banner_1-1024x680.jpg" class="card-img img-fluid" alt="Rio de Janeiro">
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card-body">
+                                <h5 class="card-title">Rio de Janeiro</h5>
+                                <p class="card-text">A Cidade Maravilhosa com suas praias icônicas e o Cristo Redentor.</p>
+                                <a href="#" class="btn btn-sm btn-info">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+          
+            <div class="col-md-6">
+                <div class="card mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-12">
+                            <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/43/ac/8f/pelourinho.jpg?w=1200&h=1200&s=1" class="card-img img-fluid" alt="Salvador">
+                        </div>
+                        <div class="col-md-12">
+                            <div class="card-body text-right">
+                                <h5 class="card-title">Salvador</h5>
+                                <p class="card-text">A capital da Bahia com sua rica história e cultura afro-brasileira.</p>
+                                <a href="#" class="btn btn-sm btn-warning">Explorar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
