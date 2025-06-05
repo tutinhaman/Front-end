@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Dito Lambari - Culinária Cuiabana</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { 
+            margin: 0; 
+            padding: 0; 
+            box-sizing: border-box; 
+        }
+
+        body { 
+            font-family: 'Roboto', Arial, sans-serif; 
+            font-size: 18px;
+            line-height: 1.6; 
+            background-color: #f9f6f2; 
+            color: #4a3b31; 
+            padding: 0; 
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 20px 15px;
+        }
+
+        .topo {
+            background-color: #fff; 
+            padding: 25px 0;
+            border-bottom: 3px solid #c87030; 
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .topo .container { padding-top:0; padding-bottom:0; }
+
+        hgroup {
+            text-align: center; 
+            margin-bottom: 20px;
+        }
+
+        hgroup > h1 {
+            font-family: 'Playfair Display', serif; 
+            font-size: 42px; 
+            margin: 10px 0 5px 0; 
+            color: #8c5319; 
+        }
+
+        hgroup > h1 > a { 
+            color: #900; 
+            text-decoration: none; 
+        }
+         hgroup > h1 > a:hover {
+            color: #c87030; 
+         }
+
+        hgroup > h1 + h2 { 
+            font-family: 'Roboto', sans-serif;
+            font-size: 22px; 
+            margin: 5px 0 15px 0; 
+            color: #090; 
+            font-weight: 400; 
+            font-style: italic;
+        }
+
+        nav {
+        }
+        nav > ul { 
+            margin-left: 50px; 
+            list-style-position: inside; 
+            padding-left: 0; 
+        }
+
+        nav > ul > li {
+            margin-bottom: 8px; 
+            list-style: none; 
+        }
+        
+        nav > ul > li > a { 
+            text-decoration: none;
+            color: #8c5319; 
+            padding: 5px 10px; 
+            display: inline-block; 
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s;
+            font-weight: 700;
+        }
+
+        nav > ul > li > a:hover { 
+            background-color: #c87030;
+            color: #fff;
+            text-decoration: none; 
+        }
+        
+        nav > ul > li:first-child > a { 
+            color: #c60; 
+            text-decoration: none;
+        }
+
+        nav > ul > li:first-child > a:hover { 
+            color: #555; 
+            background-color: #f0f0f0; 
+            text-decoration: underline; 
+        }
+
+        nav > ul > li:last-child { 
+            font-size: 26px; 
+            list-style-type: square; 
+        }
+         nav > ul > li:last-child > a {
+            font-size: inherit; 
+            padding-left: 0; 
+         }
+
+        nav > ul > li:nth-child(3) { 
+            background: #ccc; 
+            padding: 2px 8px; 
+            border-radius: 4px; 
+            margin-left: -8px; 
+        }
+         nav > ul > li:nth-child(3) > a {
+            color: #333; 
+         }
+
+        nav > ul > li > a.corrente {
+            color: #c60; 
+            font-weight: bold; 
+            background-color: #fff5e1; 
+            border-left: 3px solid #c60;
+            padding-left: 7px;
+        }
+        nav > ul > li > a.corrente:not(nav > ul > li:first-child > a) {
+            color: #900; 
+        }
+        nav > ul > li:first-child > a.corrente {
+             border-left: 3px solid #c60;
+        }
+
+        .main-content-area {
+            background-color: #fff; 
+            padding: 30px 40px; 
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.07);
+        }
+
+        .page-content {
+            display: none; 
+            padding: 20px 0;
+            margin-top: 0; 
+            animation: fadeInContent 0.5s ease-in-out;
+        }
+        @keyframes fadeInContent {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .page-content:first-of-type { 
+             border-top: none;
+             margin-top: 0;
+        }
+
+        .page-content.active {
+            display: block; 
+        }
+
+        .page-content h3 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 30px; 
+            color: #c87030; 
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .page-content h4 { 
+            font-family: 'Playfair Display', serif;
+            font-size: 24px; 
+            color: #8c5319; 
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .page-content p {
+            margin-bottom: 18px;
+            line-height: 1.7; 
+        }
+        .page-content article {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+         .page-content article:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+         }
+        
+        .recipe-image { 
+            max-width: 100%;
+            height: auto;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+         .image-destaque-home {
+            width: 100%;
+            max-height: 400px; 
+            object-fit: cover; 
+        }
+        
+        .image-sobre {
+            float: right;
+            margin-left: 25px;
+            margin-bottom: 15px;
+            max-width: 45%; 
+        }
+
+
+        .contact-form div {
+          margin-bottom: 18px;
+        }
+        .contact-form label {
+          display: block;
+          margin-bottom: 6px;
+          font-weight: 700; 
+          color: #4a3b31;
+        }
+        .contact-form input[type="text"],
+        .contact-form input[type="email"],
+        .contact-form textarea {
+          width: 100%; 
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          font-family: 'Roboto', sans-serif;
+          font-size: 16px;
+        }
+         .contact-form input[type="text"]:focus,
+        .contact-form input[type="email"]:focus,
+        .contact-form textarea:focus {
+            border-color: #c87030;
+            box-shadow: 0 0 0 2px rgba(200, 112, 48, 0.15);
+            outline: none;
+        }
+
+        .contact-form button {
+          padding: 12px 25px;
+          background-color: #090; 
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: 700;
+          font-size: 17px;
+          transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #070; 
+        }
+        #formFeedback {
+            margin-top:15px; 
+            padding:10px; 
+            border-radius: 4px;
+            text-align: center;
+        }
+        
+        .rodape {
+            background-color: #4a3b31; 
+            color: #f9f6f2; 
+            padding: 30px 0;
+            margin-top: 40px;
+            font-size: 15px;
+            text-align: center;
+        }
+        .rodape .container { padding-top:0; padding-bottom:0; }
+        .rodape p {
+            margin-bottom: 5px;
+            color: #e4dcd3; 
+        }
+        .rodape p:last-child { margin-bottom: 0; }
+
+        @media (max-width: 768px) {
+            body { font-size: 17px; }
+            .container { width: 95%; }
+            hgroup > h1 { font-size: 34px; }
+            hgroup > h1 + h2 { font-size: 19px; }
+            nav > ul { margin-left: 20px; } 
+            .main-content-area { padding: 20px; }
+            .page-content h3 { font-size: 26px; }
+            .page-content h4 { font-size: 22px; }
+            .image-sobre {
+                float: none;
+                max-width: 100%;
+                margin-left: 0;
+                margin-top: 15px;
+            }
+            .contact-form input[type="text"],
+            .contact-form input[type="email"],
+            .contact-form textarea { width: 100%; }
+            nav > ul > li:last-child { font-size: 22px; } 
+        }
+    </style>
+</head>
+<body class="home-active"> 
+    <header class="topo">
+        <div class="container">
+            <hgroup>
+                <h1><a href="#home" class="nav-link">Site do Dito Lambari</a></h1>
+                <h2>Site destinado a divulgar o trabalho de Dito Lambari</h2>
+            </hgroup>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-link corrente">Home</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#receitas" class="nav-link">Receitas</a></li> 
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content-area"> 
+            <section id="home-content" class="page-content active">
+                <h3>Bem-vindo ao Site do Dito Lambari!</h3>
+                <p>Este é o site oficial de Benedito Lambari, mestre na culinária cuiabana. Explore nossas páginas para conhecer mais sobre minha trajetória, descobrir receitas deliciosas e entrar em contato.</p>
+                <p>A culinária de Cuiabá é rica em sabores e tradições. Venha comigo nessa jornada gastronômica!</p>
+                <img src="1.jpg" alt="[Imagem Principal da Home com Sabores de Cuiabá]" class="recipe-image image-destaque-home">
+            </section>
+
+            <section id="sobre-content" class="page-content">
+                <h3>Um Pouco da Trajetória de Dito Lambari</h3>
+                <p>Benedito Lambari, carinhosamente conhecido como Dito Lambari, é um apaixonado pela culinária cuiabana desde jovem. Nascido e criado no coração de Mato Grosso, Dito aprendeu os segredos da cozinha regional com sua família, aprimorando receitas passadas de geração em geração.</p>
+                <p>Com anos de experiência em restaurantes renomados e festivais gastronômicos, Dito se tornou uma referência quando o assunto é peixe, mujica, farofa de banana e outras iguarias locais. Este site é um convite para você conhecer mais sobre essa rica cultura e, claro, se deliciar com pratos que contam histórias.</p>
+                <img src="2.png" alt="[Retrato de Dito Lambari]" class="recipe-image image-sobre" style="max-width: 500px; margin: 15px auto; display: block;">
+            </section>
+
+            <section id="receitas-content" class="page-content">
+                <h3>Receitas Mais Famosas de Dito Lambari</h3>
+                <p>Aqui você encontrará uma seleção das receitas que consagraram Dito Lambari como um mestre na culinária cuiabana. Prepare-se para aromas e sabores inesquecíveis!</p>
+                
+                <article>
+                    <h4>1. Mojica de Pintado</h4>
+                    <img src="3.jpg" alt="[Prato de Mojica de Pintado]" class="recipe-image">
+                    <p>Um clássico cuiabano, a mojica de pintado combina a maciez do peixe com a cremosidade da mandioca e um tempero que só Dito sabe fazer. (Receita completa em breve!)</p>
+                </article>
+
+                <article>
+                    <h4>2. Farofa de Banana da Terra</h4>
+                     <img src="7.jpg" alt="[Porção de Farofa de Banana da Terra]" class="recipe-image">
+                    <p>Acompanhamento perfeito para diversos pratos, nossa farofa de banana da terra é agridoce na medida certa e crocante como deve ser. (Receita completa em breve!)</p>
+                </article>
+
+                <article>
+                    <h4>3. Maria Isabel</h4>
+                     <img src="5.jpg" alt="[Prato de Maria Isabel]" class="recipe-image">
+                    <p>Arroz com carne seca desfiada, um prato substancioso e cheio de sabor, típico da nossa região. (Receita completa em breve!)</p>
+                </article>
+            </section>
+
+            <section id="contato-content" class="page-content">
+                <h3>Formulário de Contato</h3>
+                <p>Entre em contato com Dito Lambari para eventos, encomendas ou simplesmente para trocar uma ideia sobre culinária!</p>
+                
+                <form class="contact-form" id="formContato">
+                    <div>
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Seu nome completo">
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required placeholder="seuemail@exemplo.com">
+                    </div>
+                    <div>
+                        <label for="assunto">Assunto:</label>
+                        <input type="text" id="assunto" name="assunto" placeholder="Qual o motivo do contato?">
+                    </div>
+                    <div>
+                        <label for="mensagem">Mensagem:</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" required placeholder="Escreva sua mensagem aqui..."></textarea>
+                    </div>
+                    <div>
+                        <button type="submit">Enviar Mensagem</button>
+                    </div>
+                </form>
+                <div id="formFeedback"></div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="rodape">
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Dito Lambari - Todos os direitos reservados.</p>
+            <p>Culinária Cuiabana com Tradição e Sabor.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        const pageContents = document.querySelectorAll('.page-content');
+        const bodyEl = document.body;
+
+        function showPage(pageId) {
+            pageContents.forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            const currentBodyClass = Array.from(bodyEl.classList).find(cls => cls.endsWith('-active'));
+            if (currentBodyClass) {
+                bodyEl.classList.remove(currentBodyClass);
+            }
+            
+            const activePage = document.getElementById(pageId + '-content');
+            if (activePage) {
+                activePage.classList.add('active');
+                bodyEl.classList.add(pageId + '-active'); 
+            }
+
+            navLinks.forEach(link => {
+                link.classList.remove('corrente');
+                if (link.getAttribute('href') === '#' + pageId) {
+                    link.classList.add('corrente');
+                }
+            });
+            window.scrollTo(0, 0);
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); 
+                const pageId = this.getAttribute('href').substring(1);
+                showPage(pageId);
+                history.pushState({page: pageId}, '', '#' + pageId);
+            });
+        });
+        
+        function handleInitialPageLoad() {
+            let initialPageId = 'home'; 
+            if (window.location.hash) {
+                const hashPageId = window.location.hash.substring(1);
+                if (document.getElementById(hashPageId + '-content')) {
+                    initialPageId = hashPageId;
+                }
+            }
+            showPage(initialPageId);
+        }
+
+        window.addEventListener('popstate', function(event) {
+            if (event.state && event.state.page) {
+                showPage(event.state.page);
+            } else {
+                let pageFromHash = 'home';
+                if(window.location.hash){
+                    const currentHash = window.location.hash.substring(1);
+                    if(document.getElementById(currentHash + '-content')){
+                        pageFromHash = currentHash;
+                    }
+                }
+                showPage(pageFromHash);
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', handleInitialPageLoad);
+
+        const form = document.getElementById('formContato');
+        const feedbackDiv = document.getElementById('formFeedback');
+        if (form) {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); 
+                
+                const nome = document.getElementById('nome').value;
+                const email = document.getElementById('email').value;
+
+                if (nome && email) { 
+                    feedbackDiv.textContent = 'Mensagem enviada com sucesso! (Simulação)';
+                    feedbackDiv.style.color = '#070'; 
+                    feedbackDiv.style.backgroundColor = '#d1e7dd';
+                    feedbackDiv.style.border = '1px solid #a3cfbb';
+                    form.reset(); 
+                } else {
+                    feedbackDiv.textContent = 'Por favor, preencha nome e email.';
+                    feedbackDiv.style.color = '#842029'; 
+                    feedbackDiv.style.backgroundColor = '#f8d7da';
+                    feedbackDiv.style.border = '1px solid #f5c2c7';
+                }
+                setTimeout(() => { 
+                    feedbackDiv.textContent = ''; 
+                    feedbackDiv.style.backgroundColor = 'transparent';
+                    feedbackDiv.style.border = 'none';
+                }, 5000);
+            });
+        }
+    </script>
+</body>
+</html>
